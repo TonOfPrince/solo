@@ -7,9 +7,15 @@
 </head>
 <body>
     <div ng-app="yogauto" ng-controller="poseCtrl">
-        <p ng-repeat='pose in poses'>
-        	{{pose.english}}
-        </p> 
+    	<button type="button" ng-click="randomPoses()">
+            Random Poses
+        </button>
+        <table>
+        <tr ng-repeat='pose in randomPosesList'>
+        	
+        		<td>{{pose.english}}</td><td> {{pose.sanskrit}}</td><td> <img src={{pose.picture}}></td>
+        	</tr>
+        </table>
     </div>
 </body>
 </html>
