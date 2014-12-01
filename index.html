@@ -10,10 +10,11 @@
     	<button type="button" ng-click="randomPoses()">
             Random Poses
         </button>
+
         <table>
         <tr ng-repeat='pose in randomPosesList'>
-        	
-        		<td>{{pose.english}}</td><td> {{pose.sanskrit}}</td><td> <img src={{pose.picture}}></td>
+        		<td>{{pose.english}}</td><td> {{pose.sanskrit}}</td>
+        		<!-- <td>{{pose.english}}</td><td> {{pose.sanskrit}}</td><td> <img src={{pose.picture}}></td> -->
         	</tr>
         </table>
     </div>

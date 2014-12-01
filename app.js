@@ -223,14 +223,22 @@ angular.module('yogauto', [])
 	$scope.poses = Counter.poses;
 	$scope.randomPosesList = [];
 	$scope.randomPoses = function() {
+		var used = {};
 		$scope.randomPosesList = [];
 		for (var i = 0; i < 5; i++) {
-			$scope.randomPosesList.push($scope.poses[Math.floor(Math.random()*$scope.poses.length)]);
+			var repeat  = true;
+			while(repeat) {
+				var indexToPush = Math.floor(Math.random()*$scope.poses.length);
+				if (!used[indexToPush]) {
+					used[indexToPush] = true;
+					$scope.randomPosesList.push($scope.poses[indexToPush]);
+					repeat = false;
+				}
+			}
 		}
-		return $scope.randomPosesList;
-	}	
+	}
+});	
 	
-});
 
 
 
