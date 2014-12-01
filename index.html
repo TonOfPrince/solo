@@ -1,0 +1,15 @@
+<doctype! html>
+<html>
+<head>
+	<script src="./bower_components/angular/angular.min.js"></script>
+	<!--<script src="data.js"></script> -->
+	<script src="app.js"></script>
+</head>
+<body>
+    <div ng-app="yogauto" ng-controller="poseCtrl">
+        <p ng-repeat='pose in poses'>
+        	{{pose.english}}
+        </p> 
+    </div>
+</body>
+</html>
