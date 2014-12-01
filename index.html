@@ -7,10 +7,10 @@
 </head>
 <body>
     <div ng-app="yogauto" ng-controller="poseCtrl">
-    	<button type="button" ng-click="randomPoses()">
+        <input type='number' name='number' ng-model='number'>
+        <button type="button" ng-click="randomPoses(number)">
             Random Poses
         </button>
-
         <table>
         <tr ng-repeat='pose in randomPosesList'>
         		<td>{{pose.english}}</td><td> {{pose.sanskrit}}</td>

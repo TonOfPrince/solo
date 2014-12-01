@@ -222,10 +222,10 @@ angular.module('yogauto', [])
 .controller('poseCtrl', function($scope, Counter) {
 	$scope.poses = Counter.poses;
 	$scope.randomPosesList = [];
-	$scope.randomPoses = function() {
+	$scope.randomPoses = function(number) {
 		var used = {};
 		$scope.randomPosesList = [];
-		for (var i = 0; i < 5; i++) {
+		for (var i = 0; i < number; i++) {
 			var repeat  = true;
 			while(repeat) {
 				var indexToPush = Math.floor(Math.random()*$scope.poses.length);
