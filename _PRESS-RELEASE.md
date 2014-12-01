@@ -18,27 +18,38 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
+  Yogauto
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  An application that gives yoga practicers a sequence of yoga poses.
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  There are a wide variety of yoga poses out there. In order for a yogi to learn these moves, they must first be exposed to them. This application gives users a randomized sequence of yoga poses that they can practice given how much time they wish to practice for. This will build yoga knowledge while still allowing people to practice yoga on their own time.
 
 ## Problem ##
   > Describe the problem your product solves.
+  Practicing yoga outside of a class can be difficult given lack of knowledge of yoga moves.
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+  My product allows yogis to learn new yoga moves and gives them a class based on their preferences.
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+  "Yogauto is revolutionlizing the way people practice yoga. It is combinging ancient practices with modern technology to provide the art of yoga to the world simply and efficiently."
+
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
+  By going to the website, you instantly have a unique yoga class ready for you!
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  "Yogauto is absolutely fantastic. Being an amateur yogi and working 80 hours a week, I have very little time to attend attend yoga classes to expand my practice. Yogauto allows me the flexibility and knowledge to expand my practice daily with little effort"
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+  Visit yogauto.com and start a yoga session at your convenience.
+
