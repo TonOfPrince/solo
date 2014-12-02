@@ -238,6 +238,7 @@ angular.module('yogauto', [])
 	];
 })
 .controller('poseCtrl', function($scope, Counter) {
+	$scope.undecided = true;
 	$scope.practicing = true;
 	$scope.paused = true;
 	$scope.nextable = false;
@@ -246,6 +247,7 @@ angular.module('yogauto', [])
 	$scope.poses = Counter.poses;
 	$scope.randomPosesList = [];
 	$scope.randomPoses = function(number) {
+		$scope.undecided = false;
 		$scope.practicing = false;
 		$scope.listed = true;
 		$scope.paused = true;
@@ -309,7 +311,6 @@ angular.module('yogauto', [])
 	$scope.showPicture = function(index) {
 		$scope.current = $scope.randomPosesList[index];
 		$scope.started = true;
-		$scope.$apply();
 	}
 });	
 	

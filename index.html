@@ -32,20 +32,55 @@
 	</nav>
 	    <div ng-app="yogauto" ng-controller="poseCtrl">
 	    	<div class='row'>
+	    	<h4 class="text-center" ng-show="undecided"> How many poses would you like to practice? </h4>
 	        <input class='col-md-offset-4' type='number' name='number' ng-model='number'>
 	        <button type="button" ng-click="randomPoses(number)">
 	            Random Poses
 	        </button>
 	        <button type="button" ng-click="practicePoses()" ng-show='!practicing'>
-	            Practice Poses
+	            Start Practice
 	        </button>
 	        <button type="button" ng-click="pausePoses()" ng-show='!paused'>
-	            Pause Poses
+	            Pause Practice
 	        </button>
 	        <button type="button" ng-click="nextPose()" ng-show="nextable">
-	            Next Pose
+	            Skip Pose
 	        </button>
 	    	</div>
+
+	    	<!-- <div class='media' ng-show="started">
+
+	    		<div class="media-body">
+	    		<div class="media-left">
+	    		    <table class='table'>
+	    		        <thead ng-show="listed"><tr><th class='text-center'>English Name</th><th class='text-center'>Sanskrit Name</th></thead>
+	    		        <tbody>
+	    		    	    <tr ng-repeat='pose in randomPosesList'>
+	    		    	        <td class='text-center' ng-click="removePose($index)" ng-mouseover="showPicture($index)">{{pose.english}}</td>
+	    		    	        <td class='text-center' ng-click="removePose($index)" ng-mouseover="showPicture($index)">{{pose.sanskrit}}</td>
+	    		    	    </tr>
+	    		    	</tbody>
+	    		    </table>
+	    		</div>
+	    		<div class="media-left media-middle">
+	    		<div class="media-body">
+	    		    <div class='row' ng-show="started">
+	    		    	<h4 class="media-heading"><u>English Name</u></h4>
+	    		    	<h4><u>Sanskrit Name</u></h4>
+	    		    </div>
+	    		    <div class='row' ng-show="started">
+	    		    	<div>{{current.english}}</div>
+	    		    	<div>{{current.sanskrit}}</div>
+	    		    </div>
+	    		        <div class='row' ng-show="started">
+	    		        	<img src={{current.picture}}>
+	    		    		<div>{{current.description}} </div>
+	    		    	</div>
+	    		</div>
+	    	</div> -->
+
+
+
 	        <div class='row' ng-show="started">
 	        	<h4 class="col-md-2 col-md-offset-4 text-center"><u>English Name</u></h4>
 	        	<h4 class="col-md-2 text-center"><u>Sanskrit Name</u></h4>
@@ -68,6 +103,7 @@
 		        	</tr>
 		        </tbody>
 	        </table>
+
 	    </div>
 	</div>
 </body>
