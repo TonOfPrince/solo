@@ -56,14 +56,15 @@
 	        </div>
 	        <div class='row' ng-show="started">
 	        	<img class="col-md-4 col-md-offset-4 text-center"src={{current.picture}}>
+	        	<div>{{current.description}} </div>
 	        </div>
 
 	        <table class='table'>
 	        	<thead ng-show="listed"><tr><th class='text-center'>English Name</th><th class='text-center'>Sanskrit Name</th></thead>
 	        	<tbody>
 		        	<tr ng-repeat='pose in randomPosesList'>
-		        		<td class='text-center' ng-click="removePose($index)">{{pose.english}}</td>
-		        		<td class='text-center' ng-click="removePose($index)">{{pose.sanskrit}}</td>
+		        		<td class='text-center' ng-click="removePose($index)" ng-mouseover="showPicture($index)">{{pose.english}}</td>
+		        		<td class='text-center' ng-click="removePose($index)" ng-mouseover="showPicture($index)">{{pose.sanskrit}}</td>
 		        	</tr>
 		        </tbody>
 	        </table>
