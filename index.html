@@ -11,6 +11,12 @@
         <button type="button" ng-click="randomPoses(number)">
             Random Poses
         </button>
+        <button type="button" ng-click="practicePoses()">
+            Practice Poses
+        </button>
+        <table>
+        	<tr><td>{{current.english}}</td><td><img src={{current.picture}}></td><td> {{current.sanskrit}}</td></tr>
+        </table>
         <table>
         <tr ng-repeat='pose in randomPosesList'>
         		<td>{{pose.english}}</td><td> {{pose.sanskrit}}</td>

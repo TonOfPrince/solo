@@ -29,7 +29,7 @@ angular.module('yogauto', [])
 	    english: "Bow Pose",
 	    sanskrit: "Dhanurasana",
 	    type: ['BACKBENDS', 'CHEST OPENERS'],
-	    picture: 'http://d3v7xustcq7358.cloudfront.net/wp-content/uploads/garden_228_03_4501.jpg'
+	    picture: 'http://d3v7xustcq7358.cloudfront.net/wp-content/uploads/HP_260_10_FNL_4501.jpg'
 	  },
 	  {
 	    english: "Bridge Pose",
@@ -236,6 +236,17 @@ angular.module('yogauto', [])
 				}
 			}
 		}
+	};
+	$scope.practicePoses = function() {
+		$scope.current = $scope.randomPosesList[0];
+		var transition = setInterval(function() {
+			$scope.randomPosesList.shift(); 
+			$scope.current = $scope.randomPosesList[0];
+			$scope.$apply();
+			if ($scope.randomPosesList.length === 0) {
+				clearInterval(transition);
+			}
+		}, 2000);
 	}
 });	
 	
