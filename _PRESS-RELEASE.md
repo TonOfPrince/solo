@@ -18,7 +18,7 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
-  Yogauto
+  YogiAuto
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
@@ -38,7 +38,7 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
-  "Yogauto is revolutionlizing the way people practice yoga. It is combinging ancient practices with modern technology to provide the art of yoga to the world simply and efficiently."
+  "YogiAuto is revolutionlizing the way people practice yoga. It is combinging ancient practices with modern technology to provide the art of yoga to the world simply and efficiently."
 
 
 ## How to Get Started ##
@@ -47,9 +47,9 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
-  "Yogauto is absolutely fantastic. Being an amateur yogi and working 80 hours a week, I have very little time to attend attend yoga classes to expand my practice. Yogauto allows me the flexibility and knowledge to expand my practice daily with little effort"
+  "YogiAuto is absolutely fantastic. Being an amateur yogi and working 80 hours a week, I have very little time to attend attend yoga classes to expand my practice. YogiAuto allows me the flexibility and knowledge to expand my practice daily with little effort"
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
-  Visit yogauto.com and start a yoga session at your convenience.
+  Visit yogiauto.com and start a yoga session at your convenience.
 

@@ -93,13 +93,13 @@ angular.module('yogauto', [])
 	  },
 	  {
 	    english: "Dolphin Plank Pose",
-	    sanskrit: "",
+	    sanskrit: "Makara Adho Mukha Svanasana",
 	    type: ['ARM BALANCES', 'CORE YOGA', 'YOGA FOR STRENGTH'],
 	    picture: 'http://d3v7xustcq7358.cloudfront.net/wp-content/uploads/Dolphin-Plank-Pose.jpg'
 	  },
 	  {
 	    english: "Dolphin Pose",
-	    sanskrit: "",
+	    sanskrit: "Makarasana",
 	    type: ['CORE YOGA', 'STANDING POSES', 'YOGA FOR STRENGTH'],
 	    picture: 'http://d3v7xustcq7358.cloudfront.net/wp-content/uploads/263_hp_bends_10_4502.jpg'
 	  },
@@ -223,6 +223,11 @@ angular.module('yogauto', [])
 	$scope.poses = Counter.poses;
 	$scope.randomPosesList = [];
 	$scope.randomPoses = function(number) {
+		if ($scope.transition) {
+			clearInterval($scope.transition);
+			$scope.current = null
+			$scope.transition = null;
+		}
 		var used = {};
 		$scope.randomPosesList = [];
 		for (var i = 0; i < number; i++) {
@@ -239,14 +244,23 @@ angular.module('yogauto', [])
 	};
 	$scope.practicePoses = function() {
 		$scope.current = $scope.randomPosesList[0];
-		var transition = setInterval(function() {
+		$scope.transition = setInterval(function() {
 			$scope.randomPosesList.shift(); 
 			$scope.current = $scope.randomPosesList[0];
 			$scope.$apply();
 			if ($scope.randomPosesList.length === 0) {
-				clearInterval(transition);
+				clearInterval($scope.transition);
 			}
 		}, 2000);
+	};
+	$scope.pausePoses = function() {
+		clearInterval($scope.transition);
+		$scope.transition = null;
+	}
+	$scope.nextPose = function() {
+		clearInterval($scope.transition);
+		$scope.randomPosesList.shift(); 
+		$scope.practicePoses();
 	}
 });	
 	
