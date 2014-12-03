@@ -298,10 +298,12 @@ angular.module('yogiauto', [
 	$scope.nextable = false;
 	$scope.started = false;
 	$scope.listed = false;
+	$scope.err = false;
 	$scope.poses = Counter.poses;
 	$scope.randomPosesList = [];
 	$scope.randomPoses = function(number) {
 		if (number === parseInt(number) && number > 0) {	
+			$scope.err = false;
 			$scope.undecided = false;
 			$scope.practicing = false;
 			$scope.listed = true;
@@ -328,7 +330,7 @@ angular.module('yogiauto', [
 			}
 			$scope.current = $scope.randomPosesList[0];
 		} else {
-			alert('Please enter a positive integer')
+			$scope.err = true;
 		}
 	};
 	$scope.practicePoses = function() {

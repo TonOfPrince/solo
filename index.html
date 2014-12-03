@@ -45,6 +45,7 @@
 		        <button type="button" ng-click="randomPoses(number)">
 		            Random Poses
 		        </button>
+		        <div class="alert alert-danger col-md-offset-4 col-md-3" role="alert" ng-show='err'>Please enter a positive integer</div>
 		        <button type="button" ng-click="practicePoses()" ng-show='!practicing'>
 		            Start Practice
 		        </button>
@@ -115,8 +116,8 @@
 	        	<h2 class="col-md-3 text-center"><u>Sanskrit Name</u></h2>
 	        </div>
 	        <div class='row' ng-show="started">
-	        	<h3 class="col-md-3 col-md-offset-3 text-center">{{current.english}}</h3>
-	        	<h3 class="col-md-3 text-center">{{current.sanskrit}}</h3>
+	        	<h4 class="col-md-3 col-md-offset-3 text-center">{{current.english}}</h4>
+	        	<h4 class="col-md-3 text-center">{{current.sanskrit}}</h4>
 	        </div>
 	        
 	        <div class='row' ng-show="started">
