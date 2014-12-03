@@ -38,8 +38,9 @@
     <script src="app.js"></script>
 	  <!--   USE!!!!! -->
 	    <div ng-app="yogiauto" ng-controller="poseCtrl">
-	    	<div class='row'>
+		    	<h1 class="text-center" ng-show="!undecided"> YogiAuto </h1>
 		    	<h4 class="text-center" ng-show="undecided"> How many poses would you like to practice? </h4>
+	    	<div class='row'>
 		        <input class='col-md-offset-4' type='number' name='number' ng-model='number'>
 		        <button type="button" ng-click="randomPoses(number)">
 		            Random Poses
@@ -55,7 +56,9 @@
 		        </button>
 	    	</div>
 	    	<!-- <div class='row'>
-	    		Search: <input ng-model="poseType">
+	    		<div class='col-md-offset-4'>
+	    			Search: <input ng-model="poseType">
+	    		</div>
 	    		<table id="searchUrls" class="table table-striped table-bordered">
 	    		    <thead>
 	    		        <tr><th>English Name</th><th>Sanskrit Name</th></tr>
@@ -105,36 +108,43 @@
 
 <!-- USE -->
 	        <div class='row' ng-show="started">
-	        	<h4 class="col-md-2 col-md-offset-4 text-center"><u>English Name</u></h4>
-	        	<h4 class="col-md-2 text-center"><u>Sanskrit Name</u></h4>
+	        	<h2 class="col-md-3 col-md-offset-3 text-center"><u>English Name</u></h2>
+	        	<h2 class="col-md-3 text-center"><u>Sanskrit Name</u></h2>
 	        </div>
 	        <div class='row' ng-show="started">
-	        	<div class="col-md-2 col-md-offset-4 text-center">{{current.english}}</div>
-	        	<div class="col-md-2 text-center">{{current.sanskrit}}</div>
+	        	<h3 class="col-md-3 col-md-offset-3 text-center">{{current.english}}</h3>
+	        	<h3 class="col-md-3 text-center">{{current.sanskrit}}</h3>
 	        </div>
 	        
 	        <div class='row' ng-show="started">
-	        	<h4 ng-show="listed" class='text-center col-md-4'>English Name</h4>
-	        	<h4 ng-show="listed" class='text-center col-md-offset-4 col-md-4'>Sanskrit Name</h4>
+	        	<h4 ng-show="listed" class='text-center col-md-3'><u>English Name</u></h4>
+	        	<h4 ng-show="listed" class='text-center col-md-offset-6 col-md-3'><u>Sanskrit Name</u></h4>
 	        </div>
 	        <!-- <div class='row' ng-show="started"> -->
-    		    <ul class="col-md-4 list-group">
-    		        <li ng-repeat='pose in randomPosesList' ng-show="listed" class='list-group-item text-center' ng-mouseover="showPicture($index)">
-    		        	<div class='row'>
-    		        	 <!-- <span class="glyphicon glyphicon-star-empty col-lg-1" aria-hidden="true"></span> -->
-    		        	 <span class="text-center col-lg-2">{{pose.english}}</span>
-    		        	 <span class="glyphicon glyphicon-remove col-lg-1" aria-hidden="true" ng-click="removePose($index)"></span>
-    		        	</div>
+    		    <ul class="col-md-3 list-group text-right">
+    		        <li ng-repeat='pose in randomPosesList' ng-show="listed" class='list-group-item text-center col-lg-12' ng-mouseover="showPicture($index)">
+    		        	<!-- <div class='row'> -->
+    		        	  <!-- <span class="glyphicon glyphicon-star-empty col-lg-1" aria-hidden="true"></span> -->
+    		        	  <span class="text-center col-md-10 col-md-offset-1">{{pose.english}}</span>
+    		        	  <span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="removePose($index)"></span>
+    		        	<!-- </div> -->
     		        </li>
 	        	</ul>
 	        	
-	        	<img class="col-md-4 text-center" src={{current.picture}}>
+	        	<div class="col-md-6">
+	        	  <img class="col-md-10 col-md-offset-1 text-center" src={{current.picture}}>
+	        	  <!-- <ul> -->
+	        	    <li class="col-md-12" ng-repeat='step in current.description'></br>{{current.description[$index]}}</br></li>
+	        	  <!-- </ul> -->
+	        	</div>
 
-    		    <ul  class="col-md-4 list-group">
-	        		<li ng-repeat='pose in randomPosesList' ng-show="listed" class='list-group-item text-center' ng-mouseover="showPicture($index)">
+    		    <ul  class="col-md-3 list-group">
+	        		<li ng-repeat='pose in randomPosesList' ng-show="listed" class='list-group-item text-center col-lg-12' ng-mouseover="showPicture($index)">
 	        			<!-- <span class="glyphicon glyphicon-star-empty col-lg-1" aria-hidden="true"></span> -->
-	        			<span class='text-center col-lg-2'>{{pose.sanskrit}}</span>
-	        			<span class="glyphicon glyphicon-remove col-lg-1" aria-hidden="true" ng-click="removePose($index)"></span>
+	        			<!-- <div class='row'> -->
+	        			<span class="glyphicon glyphicon-remove col-md-1" aria-hidden="true" ng-click="removePose($index)"></span>
+	        			<span class='text-center col-md-10 '>{{pose.sanskrit}}</span>
+	        		<!-- </div> -->
 
 	        		</li>
 	        	</ul>
