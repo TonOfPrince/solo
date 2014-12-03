@@ -354,14 +354,17 @@ angular.module('yogiauto', [
 	$scope.pausePoses = function() {
 		$scope.practicing = false;
 		$scope.paused = true;
-		$scope.nextable = false;
+		// $scope.nextable = false;
 		clearInterval($scope.transition);
 		$scope.transition = null;
 	}
 	$scope.nextPose = function() {
 		clearInterval($scope.transition);
+		$scope.current = $scope.randomPosesList[1];
 		$scope.randomPosesList.shift(); 
-		$scope.practicePoses();
+		if ($scope.practicing) {
+			$scope.practicePoses();
+		}
 	}
 	$scope.removePose = function(index) {
 		if ($scope.current === $scope.randomPosesList[index]) {
@@ -372,6 +375,14 @@ angular.module('yogiauto', [
 	$scope.showPicture = function(index) {
 		$scope.current = $scope.randomPosesList[index];
 		$scope.started = true;
+	}
+	$scope.showSearchPicture = function(index) {
+		$scope.current = $scope.randomPosesList[index];
+		$scope.started = true;
+	}
+	$scope.addPose = function(index) {
+		$scope.current = $scope.randomPosesList.push(index);
+		// $scope.started = true;
 	}
 });	
 	

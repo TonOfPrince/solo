@@ -55,24 +55,27 @@
 		            Skip Pose
 		        </button>
 	    	</div>
-	    	<!-- <div class='row'>
+
+	    	<!-- <form name="poseForm" class='row col-md-6 '>
 	    		<div class='col-md-offset-4'>
-	    			Search: <input ng-model="poseType">
+	    			Search: <input ng-model="poseType" name="searchPose">
 	    		</div>
-	    		<table id="searchUrls" class="table table-striped table-bordered">
+	    		<table id="searchPoses" class="table table-striped table-bordered col-md-6" ng-hide="poseForm.searchPose.$invalid || poseForm.searchPose.$pristine || poseType === ''">
 	    		    <thead>
 	    		        <tr><th>English Name</th><th>Sanskrit Name</th></tr>
 	    		    </thead>
 	    		    <tbody>
-	    		        <tr ng-repeat="pose in poses | filter:poseType">
-	    		        <td ng-mouseover="showPicture($index)">{{ pose.english }}</td>
-	    		        <td ng-mouseover="showPicture($index)">
+	    		        <tr  ng-repeat="pose in poses | filter:poseType" ng-mouseover="showSearchPicture($index)">
+	    		        <td>
+	    		        	{{ pose.english }}
+	    		        </td>
+	    		        <td >
 	    		          {{ pose.sanskrit}}
 	    		       </td>
 	    		        </tr>
 	    		    </tbody>
 	    		</table>
-	    	</div> -->
+	    	</form> -->
 
 	    	<!-- <div class='media' ng-show="started">
 
